@@ -82,7 +82,7 @@ $ cmake --build _builds
 5. Стандартные потоки вывода дочерних процессов необходимо перенаправить в стандартный поток 
 вывода родительского процесса исполняемого файла **builder**.
 
-6. Подключение библиотек [**Boost.Process**](https://docs.hunter.sh/en/latest/packages/pkg/BoostProcess.html) и [**Async++**](https://docs.hunter.sh/en/latest/packages/pkg/Async++.html) осуществить с использованием пакетного менеджера **Hunter**.
+6. Подключение библиотек [**Boost.Process**](https://hunter.readthedocs.io/en/latest/packages/pkg/BoostProcess.html) и [**Async++**](https://hunter.readthedocs.io/en/latest/packages/pkg/Async++.html) осуществить с использованием пакетного менеджера **Hunter**.
 
 ## Рекомендации
 

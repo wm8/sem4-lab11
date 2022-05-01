@@ -1,5 +1,6 @@
 #include <example.hpp>
-
+#include "Utils.h"
 int main() {
-  example();
+  Data* d = new Data();
+  run(d);
 }

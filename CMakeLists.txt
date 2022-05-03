@@ -20,7 +20,7 @@ HunterGate(
 )
 
 # TODO: rename project and delete this comment
-project(template VERSION 0.1.0)
+project(lab11 VERSION 0.1.0)
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
@@ -34,8 +34,6 @@ hunter_add_package(Boost COMPONENTS program_options)
 find_package(Boost CONFIG REQUIRED program_options)
 hunter_add_package(BoostProcess)
 find_package(BoostProcess CONFIG REQUIRED)
-hunter_add_package(Async++)
-find_package(Async++ CONFIG REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC
   # enum your files and delete this comment
@@ -43,7 +41,6 @@ add_library(${PROJECT_NAME} STATIC
         include/Utils.cpp include/Utils.h include/Data.h)
 target_link_libraries(${PROJECT_NAME} Boost::program_options)
 target_link_libraries(${PROJECT_NAME} BoostProcess::boost_process)
-target_link_libraries(${PROJECT_NAME} Async++::Async++)
 add_executable(demo
   ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp
 )

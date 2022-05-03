@@ -1,6 +1,4 @@
-//
-// Created by Алекс on 29.04.2022.
-//
+//Copyright 2022 wm8
 
 #ifndef TEMPLATE_UTILS_H
 #define TEMPLATE_UTILS_H
@@ -8,6 +6,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <chrono>
+#include <thread>
 #include <unistd.h>
 #include <boost/program_options.hpp>
 #include <boost/process/initializers.hpp>
@@ -21,5 +21,6 @@ namespace bpi = boost::process::initializers;
 using std::string;
 using std::exception;
 bool ParseArgs(Data* data, int argc, char **argv);
+bool runCommand(std::vector<string>& args);
 void run(Data* data);
 #endif  // TEMPLATE_UTILS_H

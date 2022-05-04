@@ -45,8 +45,7 @@ bool runCommand(std::vector<string>& args) {
   boost::system::error_code ec;
   bp::child c = bp::execute(
       bpi::set_on_error(ec),
-      bpi::set_args(args)
-  );
+      bpi::set_args(args));
   auto ex_code = bp::wait_for_exit(c);
   /*if(ex_code) {
     //std::cout << ec.message() << std::endl;
@@ -55,7 +54,6 @@ bool runCommand(std::vector<string>& args) {
   return ex_code == 0;
 }
 void run([[maybe_unused]]  Data * data) {
-
   data->cmake_path = bp::search_path("cmake");
   if (!data->timeout)
     std::this_thread::sleep_for(std::chrono::seconds(data->timeout));
